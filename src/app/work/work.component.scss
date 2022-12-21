@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+img {
+    width: 90%;
+    max-width: 50rem;
+
+    & + & {
+	padding-block-start: 2rem;
+    }
+
+    &:last-of-type {
+	margin-bottom: 2rem;
+    }
+}

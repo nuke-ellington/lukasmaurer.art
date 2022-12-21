@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+
+    img {
+	margin-block-end: 2rem;
+    }
+
+	svg {
+	    width: 1.5rem;
+	    height: 1.5rem;
+	    fill: var(--theme-btn-invisible-primary--color);
+	}
+
+	ix-button {
+	    margin-inline-end: 0.5rem;
+    }
+}

@@ -1,0 +1,8 @@
+ix-basic-navigation {
+    height: 100vh;
+    overflow: auto;
+
+    .router-outlet-container {
+	padding: 2rem;
+    }
+}

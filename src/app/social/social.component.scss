@@ -1,0 +1,32 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--theme-color-2);
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+
+    svg {
+	width: 1.5rem;
+	height: 1.5rem;
+	fill: var(--theme-btn-invisible-primary--color);
+    }
+
+    ix-button {
+	margin-inline-end: 0.5rem;
+    }
+
+    @media (max-width: 500px) {
+	::ng-deep ix-button button {
+	    min-width: 2rem;
+	}
+
+	.social-link-label {
+	    display: none;
+	}
+    }
+}
+

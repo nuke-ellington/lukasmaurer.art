@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WorkComponent } from './work/work.component';
 import { AboutComponent } from './about/about.component';
+import { SocialComponent } from './social/social.component';
 
 @NgModule({
-  declarations: [AppComponent, WorkComponent, AboutComponent],
+  declarations: [AppComponent, WorkComponent, AboutComponent, SocialComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

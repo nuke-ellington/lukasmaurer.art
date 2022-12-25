@@ -1,0 +1,17 @@
+<form [formGroup]="contactForm" class="needs-validation">
+    <div>
+	<label class="form-label" for="nameInput">Name *</label>
+	<input id="nameInput" name="name" placeholder="Your name" type="text" class="form-control" formControlName="name" required />
+    </div>
+    <div>
+	<label class="form-label" for="mailInput">Email *</label>
+	<input id="mailInput" name="_replyto" placeholder="Email address" type="email" class="form-control" formControlName="mail" required />
+    </div>
+    <div>
+	<label class="form-label" for="message">Message *</label>
+	<textarea name="message" placeholder="Please enter you message here.." class="form-control" formControlName="message" required></textarea>
+    </div>
+    <input type="hidden" name="_honeypot" value="">
+    <button class="btn btn-primary" type="submit" (click)="submit($event)" [attr.disabled]="contactForm.invalid ? true : null">Send</button>
+</form>
+

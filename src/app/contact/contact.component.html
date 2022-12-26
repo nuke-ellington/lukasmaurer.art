@@ -9,7 +9,7 @@
     </div>
     <div>
 	<label class="form-label" for="message">Message *</label>
-	<textarea name="message" placeholder="Please enter you message here.." class="form-control" formControlName="message" required></textarea>
+	<textarea name="message" placeholder="Please enter your message here.." class="form-control" formControlName="message" required></textarea>
     </div>
     <input type="hidden" name="_honeypot" value="">
     <button class="btn btn-primary" type="submit" (click)="submit($event)" [attr.disabled]="contactForm.invalid ? true : null">Send</button>

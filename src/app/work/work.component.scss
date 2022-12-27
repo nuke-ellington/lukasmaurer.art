@@ -1,20 +1,33 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-block-start: 1rem;
-}
+    display: block;
+    padding: 2rem;
 
 img {
-    width: 90%;
-    max-width: 50rem;
+    width: 100%;
 
     & + & {
 	padding-block-start: 2rem;
     }
 
     &:last-of-type {
-	margin-bottom: 2rem;
+	margin-block-end: 1rem;
+    }
+
+    }
+
+    .pictures-container {
+	display: none;
+    }
+
+    @media (max-width: 500px) {
+	padding: 1rem;
+
+	gallery {
+	    display: none;
+	}
+
+	.pictures-container {
+	    display: initial;
+	}
     }
 }

@@ -10,5 +10,10 @@
 	button {
 	    float: right;
 	}
+
+	textarea {
+	    min-height: 4rem;
+	    overflow-y: auto;
+	}
     }
 }

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastService } from '@siemens/ix-angular';
+
 import { MailService } from '../services/mail.service';
 
 @Component({
@@ -12,9 +14,14 @@ export class ContactComponent {
 	name: new FormControl<string>(''),
 	mail: new FormControl<string>('', [Validators.email]),
 	message: new FormControl<string>(''),
+	_subject: new FormControl<string>('Message'),
+	_honeypot: new FormControl<string>(''),
     });
 
-    constructor(private readonly mailService: MailService) {}
+    constructor(
+	private readonly mailService: MailService,
+	private readonly toastService: ToastService,
+    ) {}
 
     submit(e: Event) {
 	e.preventDefault();
@@ -22,6 +29,11 @@ export class ContactComponent {
 	if (this.contactForm.invalid) {
 	    return;
 	}
+
+	this.toastService.show({
+	    icon: 'info',
+	    message: 'You will be forwarded for confirmation.',
+	});
 
 	this.mailService.send(this.contactForm.value).subscribe(response => {
 	    window.location.href = 'https://mailthis.to/confirm';

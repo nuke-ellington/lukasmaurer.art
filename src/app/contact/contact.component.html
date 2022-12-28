@@ -11,7 +11,8 @@
 	<label class="form-label" for="message">Message *</label>
 	<textarea name="message" placeholder="Please enter your message here.." class="form-control" formControlName="message" required></textarea>
     </div>
-    <input type="hidden" name="_honeypot" value="">
+    <input type="hidden" name="_honeypot" value="" formControlName="_honeypot">
+    <input type="hidden" name="_subject" formControlName="_subject">
     <button class="btn btn-primary" type="submit" (click)="submit($event)" [attr.disabled]="contactForm.invalid ? true : null">Send</button>
 </form>
 

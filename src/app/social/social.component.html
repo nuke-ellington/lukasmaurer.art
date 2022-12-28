@@ -15,4 +15,42 @@
       LukasMaurer
     </span>
 </ix-button>
+<ix-button (click)="subscribe()">Subscribe</ix-button>
 </div>
+
+<ng-template #subscribeForm let-modal>
+    <form [formGroup]="subForm" class="needs-validation">
+	<div class="modal-header mb-3">
+	    Stay up to date with our newsletter
+	</div>
+	<div class="modal-body">
+	    <div class="mb-3">
+		<label class="form-label" for="mailInput">Your email *</label>
+		<input id="mailInput" name="_replyto" placeholder="Email address" type="email" class="form-control" formControlName="email" required />
+	    </div>
+
+	    <div>
+		<div class="mb-2">Your interest *</div>
+		<input id="checkbox_1_1" type="radio" formControlName="type" value="collector" />
+		<label for="checkbox_1_1">Collector</label>
+
+		<input id="checkbox_1_2" type="radio" formControlName="type" value="artist" />
+		<label for="checkbox_1_2">Artist</label>
+
+		<input id="checkbox_1_3" type="radio" formControlName="type" value="gallery" />
+		<label for="checkbox_1_3">Gallery</label>
+	    </div>
+
+	    <input type="hidden" name="_honeypot" value="" formControlName="_honeypot">
+	    <input type="hidden" name="_subject" formControlName="_subject">
+	</div>
+
+
+	<div class="modal-footer">
+	    <ix-button ghost (click)="modal.dismiss('Cancel')">Cancel</ix-button>
+	    <button class="btn btn-primary" type="submit" (click)="modal.close('Submit')">
+		Subscribe
+	    </button>
+	</div>
+    </form>
+</ng-template>

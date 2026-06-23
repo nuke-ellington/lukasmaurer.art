@@ -1,33 +1,41 @@
 :host {
-    display: block;
-    padding: 2rem;
+  display: block;
+  padding: 2rem;
 
-img {
+  ix-typography {
+    margin-block-end: 1rem;
+  }
+
+  gallery {
+    display: block;
+    margin-block-end: 2rem;
+  }
+
+  img {
     width: 100%;
 
     & + & {
-	padding-block-start: 2rem;
+      padding-block-start: 2rem;
     }
 
     &:last-of-type {
-	margin-block-end: 1rem;
+      margin-block-end: 1rem;
     }
+  }
 
+  .pictures-container {
+    display: none;
+  }
+
+  @media (max-width: 500px) {
+    padding: 1rem;
+
+    gallery {
+      display: none;
     }
 
     .pictures-container {
-	display: none;
+      display: initial;
     }
-
-    @media (max-width: 500px) {
-	padding: 1rem;
-
-	gallery {
-	    display: none;
-	}
-
-	.pictures-container {
-	    display: initial;
-	}
-    }
+  }
 }

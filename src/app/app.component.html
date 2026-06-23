@@ -1,11 +1,13 @@
-<ix-basic-navigation applicationName="LUKAS MAURER ART">
-    <ix-menu>
-	<ix-menu-item tab-icon="pen" routerLink="work" routerLinkActive="active">Work</ix-menu-item>
-	<ix-menu-item tab-icon="info" routerLink="about" routerLinkActive="active">About</ix-menu-item>
-	<ix-menu-item tab-icon="mail" routerLink="contact" routerLinkActive="active">Contact</ix-menu-item>
-    </ix-menu>
-    <div class="content-container">
-	<app-social></app-social>
-	<router-outlet></router-outlet>
-    </div>
-</ix-basic-navigation>
+<ix-application>
+  <ix-application-header slot="application-header" name="LUKAS MAURER ART">
+    <app-social></app-social>
+  </ix-application-header>
+  <ix-menu slot="menu">
+    <ix-menu-item icon="pen" routerLink="/work" routerLinkActive="active">Work</ix-menu-item>
+    <ix-menu-item icon="info" routerLink="/about" routerLinkActive="active">About</ix-menu-item>
+    <!--<ix-menu-item icon="mail" routerLink="/contact" routerLinkActive="active">Contact</ix-menu-item>-->
+  </ix-menu>
+  <ix-content>
+    <router-outlet></router-outlet>
+  </ix-content>
+</ix-application>

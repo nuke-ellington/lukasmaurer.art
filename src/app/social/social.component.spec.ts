@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideHttpClient } from '@angular/common/http';
 import { SocialComponent } from './social.component';
 
 describe('SocialComponent', () => {
@@ -8,9 +8,9 @@ describe('SocialComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SocialComponent ]
-    })
-    .compileComponents();
+      imports: [SocialComponent],
+      providers: [provideHttpClient()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SocialComponent);
     component = fixture.componentInstance;

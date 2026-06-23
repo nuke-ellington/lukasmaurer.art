@@ -8,7 +8,8 @@
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "gallery:convert": "node node_modules/angular2-image-gallery/convert.js src/assets/img/gallery/raw"
+    "gallery:convert": "node node_modules/angular2-image-gallery/convert.js src/assets/img/gallery/raw",
+    "gallery:convert:sketchcards": "node node_modules/angular2-image-gallery/convert.js src/assets/img/gallery/raw/sketchcards --gName=sketchCards"
   },
   "private": true,
   "dependencies": {
